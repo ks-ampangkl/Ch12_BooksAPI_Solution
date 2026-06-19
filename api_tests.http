@@ -1,0 +1,48 @@
+###Test 1
+GET http://localhost:8000/api/books
+
+
+###Test 2
+POST http://localhost:8000/auth/login 
+Content-Type: application/json 
+  
+{ "email":"admin@books.test", "password":"password" } 
+
+###
+POST http://localhost:8000/api/books 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJib29rcy1hcGkiLCJzdWIiOjYsImlhdCI6MTc4MTg2MTIzNCwiZXhwIjoxNzgxODY0ODM0LCJyb2xlIjoibWVtYmVyIiwiZW1haWwiOiJtZW1iZXJAYm9va3MudGVzdCJ9.tiFwNShDzh0cjZX1qxl3iQt7mPYjJ48SzUCidf1UyiU
+Content-Type: application/json
+
+{ "title":"Future Book", "author":"X", "year": 9999 } 
+
+
+###
+POST http://localhost:8000/api/books 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJib29rcy1hcGkiLCJzdWIiOjYsImlhdCI6MTc4MTg2MTIzNCwiZXhwIjoxNzgxODY0ODM0LCJyb2xlIjoibWVtYmVyIiwiZW1haWwiOiJtZW1iZXJAYm9va3MudGVzdCJ9.tiFwNShDzh0cjZX1qxl3iQt7mPYjJ48SzUCidf1UyiU 
+Content-Type: application/json
+
+{ "title":"<script>alert('hi')</script>", "author":"X", "year":2024 } 
+
+
+###
+GET http://localhost:8000/api/books 
+
+
+###
+PUT http://localhost:8000/api/books/1   (book owned by admin) 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJib29rcy1hcGkiLCJzdWIiOjUsImlhdCI6MTc4MTg2MTg1MiwiZXhwIjoxNzgxODY1NDUyLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGJvb2tzLnRlc3QifQ.F3534luPxQKfNIniA68ai0nNUK_jLSTxtZlqDywsZUU 
+Content-Type: application/json
+
+{ "title":"Hijacked" }
+
+###
+OPTIONS http://localhost:8000/api/books 
+Origin: http://attacker.example 
+  
+
+  
+###  
+OPTIONS http://localhost:8000/api/books 
+Origin: http://localhost:5173 
+
+

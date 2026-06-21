@@ -10,7 +10,7 @@ Content-Type: application/json
 
 ###
 POST http://localhost:8000/api/books 
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJib29rcy1hcGkiLCJzdWIiOjYsImlhdCI6MTc4MTg2MTIzNCwiZXhwIjoxNzgxODY0ODM0LCJyb2xlIjoibWVtYmVyIiwiZW1haWwiOiJtZW1iZXJAYm9va3MudGVzdCJ9.tiFwNShDzh0cjZX1qxl3iQt7mPYjJ48SzUCidf1UyiU
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJib29rcy1hcGkiLCJzdWIiOjUsImlhdCI6MTc4MjAwNzI0NCwiZXhwIjoxNzgyMDEwODQ0LCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGJvb2tzLnRlc3QifQ.EBddqcLyfcXYVCKxCe8OhlQikjjRDAupVnEocfxewfc
 Content-Type: application/json
 
 { "title":"Future Book", "author":"X", "year": 9999 } 
@@ -18,7 +18,7 @@ Content-Type: application/json
 
 ###
 POST http://localhost:8000/api/books 
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJib29rcy1hcGkiLCJzdWIiOjYsImlhdCI6MTc4MTg2MTIzNCwiZXhwIjoxNzgxODY0ODM0LCJyb2xlIjoibWVtYmVyIiwiZW1haWwiOiJtZW1iZXJAYm9va3MudGVzdCJ9.tiFwNShDzh0cjZX1qxl3iQt7mPYjJ48SzUCidf1UyiU 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJib29rcy1hcGkiLCJzdWIiOjUsImlhdCI6MTc4MjAwNzI0NCwiZXhwIjoxNzgyMDEwODQ0LCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGJvb2tzLnRlc3QifQ.EBddqcLyfcXYVCKxCe8OhlQikjjRDAupVnEocfxewfc
 Content-Type: application/json
 
 { "title":"<script>alert('hi')</script>", "author":"X", "year":2024 } 
@@ -30,7 +30,7 @@ GET http://localhost:8000/api/books
 
 ###
 PUT http://localhost:8000/api/books/1   (book owned by admin) 
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJib29rcy1hcGkiLCJzdWIiOjUsImlhdCI6MTc4MTg2MTg1MiwiZXhwIjoxNzgxODY1NDUyLCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGJvb2tzLnRlc3QifQ.F3534luPxQKfNIniA68ai0nNUK_jLSTxtZlqDywsZUU 
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJib29rcy1hcGkiLCJzdWIiOjUsImlhdCI6MTc4MjAwNzI0NCwiZXhwIjoxNzgyMDEwODQ0LCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGJvb2tzLnRlc3QifQ.EBddqcLyfcXYVCKxCe8OhlQikjjRDAupVnEocfxewfc
 Content-Type: application/json
 
 { "title":"Hijacked" }

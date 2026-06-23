@@ -36,10 +36,13 @@ final class AuthController {
         if (!$u || !password_verify($b['password'] ?? '', $u['password_hash'])) 
         return $this->json($s, ['error'=>'Invalid credentials'], 401); 
         $token = $this->jwt->issue((int)$u['id'], ['role'=>$u['role'], 'email'=>$u['email']]); 
+        $user = $this->users->findById((int)$u['id']);
+        unset($user['password_hash']);
         return $this->json($s, [ 
             'token_type'=>'Bearer','expires_in'=>$this->jwt->ttl(), 
-            'access_token'=>$token, 
-        ]); 
+            'access_token'=>$token,
+            'user'=>$user,
+        ]);
     } 
   
     public function me(Request $r, Response $s): Response { 
